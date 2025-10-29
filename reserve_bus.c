@@ -13,7 +13,7 @@ int loginmenu() {
     printf("3. Exit\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
-    getchar(); // clear newline
+    getchar(); 
     return choice;
 }
 
@@ -32,9 +32,9 @@ int usermenu() {
 
 void registration() {
     printf("\nEnter your username: ");
-    getchar(); // clear leftover newline
+    getchar(); 
     fgets(username[usercount], sizeof(username[usercount]), stdin);
-    username[usercount][strcspn(username[usercount], "\n")] = '\0'; // remove newline
+    username[usercount][strcspn(username[usercount], "\n")] = '\0';  
 
     printf("Enter your password (number only): ");
     scanf("%d", &password[usercount]);
@@ -50,7 +50,7 @@ void login_fun() {
     int found = 0;
 
     printf("\nEnter your username: ");
-    getchar(); // clear newline
+    getchar(); 
     fgets(temp_username, sizeof(temp_username), stdin);
     temp_username[strcspn(temp_username, "\n")] = '\0';
 
